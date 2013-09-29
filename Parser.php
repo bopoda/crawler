@@ -2,8 +2,11 @@
 
 class Crawler_Parser extends Parser_AbstractHttp
 {
+    private $url;
+
     public function parse(array $urlInfo)
     {
+        $this->url = $urlInfo['url'];
         try {
             $response = $this->getResponse($urlInfo['url']);
         } catch (Exception $e) {
@@ -12,12 +15,12 @@ class Crawler_Parser extends Parser_AbstractHttp
             return $data;
         }
 
-        $forms = $this->findHtmlForms($response->getBody());
+        $forms = $this->findValidHtmlForms($response->getBody());
 
         return $forms;
     }
 
-    protected function findHtmlForms($body)
+    protected function findValidHtmlForms($body)
     {
         $htmlParser = new Html_Parser('utf-8', $body);
 
@@ -25,7 +28,10 @@ class Crawler_Parser extends Parser_AbstractHttp
 
         $forms = array();
         foreach ($formsDom as $formDom) {
-            $forms[] = $this->parseForm($formDom);
+            $form = $this->parseForm($formDom);
+            if ($form) {
+                $forms[] = $form;
+            }
         }
 
         return $forms;
@@ -45,10 +51,34 @@ class Crawler_Parser extends Parser_AbstractHttp
         );
 
         $fieldParser = new Html_Parser('utf-8');
-        foreach ($formParser->getDomElements('input, textarea') as $inputDom) {
+
+        foreach ($formParser->getDomElements('input') as $inputDom) {
             $fieldParser->loadDom($inputDom);
             $form['fields'][] = $fieldParser->toArray();
         }
+        foreach ($formParser->getDomElements('textarea') as $textareaDom) {
+            $fieldParser->loadDom($textareaDom);
+            $form['fields'][] = array_merge(array('type' => 'textarea'),
+                $fieldParser->toArray()
+            );
+        }
+
+        return $this->filterForm($form);
+    }
+
+    private function filterForm(array $form) {
+        if (strtolower($form['method']) !== 'post') {
+            $this->getLog()->write('Found form without post method with ' . count($form['fields']) . ' fields. Skip it.');
+            return false;
+        }
+        if (!$form['action']) {
+            $form['action'] = $this->url;
+        }
+        if (!$form['fields']) {
+            $this->getLog()->write('Found form without fields. Skip it.');
+            return false;
+        }
+
         return $form;
     }
 
