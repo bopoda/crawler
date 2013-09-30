@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta name='yandex-verification' content='55ae129c6e45950e' />
+    <title>Ask a question</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+            <meta name="robots" content="noindex" />
+            <link type="text/css" href="http://jeka.by/assets/css/general.css?216" rel="stylesheet" media="screen" />
+<link type="text/css" href="http://jeka.by/assets/css/ask.css?216" rel="stylesheet" media="screen" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript">
+    IS_LOGGED = '1';
+    </script>
+    <script type="text/javascript" src="http://jeka.by/assets/js/jquery/plugins/jquery.color-2.1.2.min.js?216"></script>
+<script type="text/javascript" src="http://jeka.by/assets/js/ask.js?216"></script>
+        <link href="http://jeka.by/assets/images/favicon.ico" rel="shortcut icon" />
+</head>
+<body>
+    <div id="top">
+        <div id="header">
+    <div id="logo">
+        <a href="http://jeka.by/">
+            <img src="http://jeka.by/assets/images/site/logo2.png" title="на главную jeka.by" width="128" height="40" alt="логотип jeka.by" />
+        </a>
+    </div>
+    <div class="ask-link">
+        <a rel="noindex, nofollow" href="/ask" title="Вопросы и ответы на вопросы [beta]">
+            <div class="icon"></div>
+            <span>вопрос-ответ</span>
+        </a>
+    </div>
+    <div id="top-menu">
+<!--noindex-->
+            <ul id="header-menu">
+                            <li>
+                    <a href="http://jeka.by/posts/by_tag/javascript" title="Посты по тегу JavaScript">
+                        JavaScript                        <span class="grey">(3)</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="http://jeka.by/posts/by_tag/linux" title="Посты по тегу Linux">
+                        Linux                        <span class="grey">(2)</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="http://jeka.by/posts/by_tag/mysql" title="Посты по тегу MySQL">
+                        MySQL                        <span class="grey">(1)</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="http://jeka.by/posts/by_tag/php" title="Посты по тегу PHP">
+                        PHP                        <span class="grey">(3)</span>
+                    </a>
+                </li>
+                    </ul>
+    <!--/noindex-->
+</div>    <div id="authorizer">
+                    <div id="userbar">
+                <a class="username" href="http://jeka.by/users/profile/root" title="Мой профиль">
+                    <span class="username">root</span>
+                    <img src="http://jeka.by/upload/avatars/1/fetq4wuhxj_46.jpg" width="46" height="46" alt="root аватар"  />
+                </a>
+                <br />
+                <a class="messages" href="#">Сообщения</a>
+                <br />
+                <a class="exit" href="http://jeka.by/logout/">Выйти</a>
+            </div>
+            </div>
+</div>
+
+    </div>
+
+    <div id="main">
+                    <div id="main-col"><div class="subheader">
+    <h1 class="caption" id="h-all-questions">
+        <img src="http://jeka.by/assets/images/icons/system-help.png" width="40" height="40" alt="Раздел вопрос-ответ" />        Ask a question <span style="font-size:12px;">[beta]</span>    </h1>
+            <div id="ask-tabs" class="tabs">
+            <a class="" href="/ask" title="the most recently asked questions">новые</a>
+            <a class="" href="/ask/popular" title="the most popular asked questions">популярные</a>
+    <!--        <a href="/questions?sort=featured" title="questions with open bounties"><span class="bounty-indicator-tab">408</span>featured</a>-->
+    <!--        <a href="/questions?sort=votes" title="questions with the most votes">votes</a>-->
+    <!--        <a href="/questions?sort=active" title="questions that have recent activity">active</a>-->
+    <!--        <a href="/questions?sort=unanswered" title="questions that have no upvoted answers">unanswered</a>-->
+        </div>
+    </div><form action="" method="post" accept-charset="utf-8" class="ask">    <div class="">
+        <h2>Название вопроса<span class="necessarily">*</span></h2>
+        <div>
+            <input type="text" name="caption" size="100%" maxlength="99" placeholder="Вкратце, в чём суть вопроса?" />        </div>
+        <div class="error_text"></div>
+        <div class="description">
+            Название вопроса должно быть уникальным и максимально точно совпадать с сутью вопроса.<br />
+            Постарайтесь избегать неговорящих и очень обобщённых названий.<br />
+                            <b>Плохие названия:</b> "Вопрос по php", "ничего не работает", "помогите написать php-функцию".<br />
+                <b>Хорошие названия:</b> "Javascript событие отрабатывает только один раз", "Как задать максимальное кол-во символов для textarea",
+                "Помогите написать php-функцию преобразования даты".
+                <br />
+                    </div>
+    </div>
+    <br />
+
+    <div class="">
+        <h2>Суть вопроса<span class="necessarily">*</span></h2>
+        <textarea name="question" rows="8" cols="60"></textarea>
+<script type="text/javascript">//<![CDATA[
+window.CKEDITOR_BASEPATH='http://jeka.by/assets/vendors/ckeditor/';
+//]]></script>
+<script type="text/javascript" src="http://jeka.by/assets/vendors/ckeditor/ckeditor.js?t=AA4E4NT"></script>
+<script type="text/javascript">//<![CDATA[
+CKEDITOR.replace('question', { "height": "260px", "width": "98%", "uiColor": "#efefef", "filebrowserBrowseUrl": "http:\/\/jeka.by\/assets\/vendors\/ckfinder\/ckfinder.html", "filebrowserImageBrowseUrl": "http:\/\/jeka.by\/assets\/vendors\/ckfinder\/ckfinder.html?type=Images", "filebrowserFlashBrowseUrl": "http:\/\/jeka.by\/assets\/vendors\/ckfinder\/ckfinder.html?type=Flash", "filebrowserUploadUrl": "http:\/\/jeka.by\/assets\/vendors\/ckfinder\/core\/connector\/php\/connector.php?command=QuickUpload&type=Files", "filebrowserImageUploadUrl": "http:\/\/jeka.by\/assets\/vendors\/ckfinder\/core\/connector\/php\/connector.php?command=QuickUpload&type=Images", "filebrowserFlashUploadUrl": "http:\/\/jeka.by\/assets\/vendors\/ckfinder\/core\/connector\/php\/connector.php?command=QuickUpload&type=Flash", "toolbar": [ [ "Source" ], [ "Undo", "Redo", "RemoveFormat" ], [ "Bold", "Italic", "Underline", "Strike" ], [ "Link", "Unlink", "Image" ], [ "Smiley" ] ], "forcePasteAsPlainText": false });
+//]]></script>
+        <div class="error_text"></div>
+        <div class="description">
+            Укажите исходные данные. В чём суть вопроса, проблемы? Что хотите получить в итоге?<br />
+            Добавьте часть исходного кода, который работает не правильно.
+        </div>
+    </div>
+    <br />
+
+    <div class="">
+        <h2>Теги</h2>
+        <div>
+            <input type="text" name="tags" size="100%" maxlength="99" placeholder="Теги, к которым относится вопрос, через запятую, max 3" />        </div>
+        <div class="error_text"></div>
+        <div class="description">
+            Например: php, javascript, memcache, bitrix, redis
+        </div>
+    </div>
+    <br />
+    <div class="">
+        <h3>Уведомления на email:</h3>
+        <label for="email_notification" class="pointer">
+            <input type="checkbox" id="email_notification" name="email_notification" value="email_notification" checked="checked" />            Получать уведомления о новых ответах на email
+
+                <span title="Уведомления будут приходить, если вопрос добавлен не анонимно">(для авторизованных)</span>
+                    </label>
+    </div>
+    <br />
+    <div class="">
+                    <input type="submit" name="add_question" value="Задать вопрос" class="button" />            </div>
+</form>
+</div>
+            <div id="right-col"><div class="block-menu">
+    <a href="http://jeka.by/ask/add" style="text-decoration: none;">
+        <input type="button" class="button" value="Задать вопрос" style="padding:2px 42px; background-color: greenYellow;" />
+    </a>
+</div> <div class="block-menu">
+    <div class="right-block-caption">
+        ЛУЧШИЕ ПОСТЫ
+    </div>
+    <div class="right-block" id="best_posts_block">
+
+            <ul>
+                                    <li>
+                        <a href="http://jeka.by/post/1001/osnovnie-komandi-linux/" title="Основные команды Linux">
+                            Основные команды Linux</a>
+                                            </li>
+                                    <li>
+                        <a href="http://jeka.by/post/1009/otschet-vremeni-na-js-uchitivaya-utc/" title="Отсчёт времени на js, учитывая UTC">
+                            Отсчёт времени на js, учитывая UTC</a>
+                                            </li>
+                            </ul>
+            </div>
+</div> <div class="block-menu">
+    <div class="right-block-caption">
+        НОВЫЕ ПОЛЬЗОВАТЕЛИ    </div>
+    <div class="right-block" id="last_users_block">
+                                    <div class="fl_l people_cell">
+                    <a href="http://jeka.by/users/profile/Swadiamma" title="Swadiamma">
+                        <img src="http://jeka.by/assets/images/site/avatars_default/ava_46.jpg"
+                             width="46"
+                             height="46"
+                             alt="Аватар пользователя Swadiamma"
+                        />
+                        Swadiamma                    </a>
+                </div>
+                            <div class="fl_l people_cell">
+                    <a href="http://jeka.by/users/profile/aerothrep" title="aerothrep">
+                        <img src="http://jeka.by/assets/images/site/avatars_default/ava_46.jpg"
+                             width="46"
+                             height="46"
+                             alt="Аватар пользователя aerothrep"
+                        />
+                        aerothrep                    </a>
+                </div>
+                            <div class="fl_l people_cell">
+                    <a href="http://jeka.by/users/profile/Typezopay" title="Typezopay">
+                        <img src="http://jeka.by/assets/images/site/avatars_default/ava_46.jpg"
+                             width="46"
+                             height="46"
+                             alt="Аватар пользователя Typezopay"
+                        />
+                        Typezopay                    </a>
+                </div>
+                            <div class="fl_l people_cell">
+                    <a href="http://jeka.by/users/profile/Befevitle" title="Befevitle">
+                        <img src="http://jeka.by/assets/images/site/avatars_default/ava_46.jpg"
+                             width="46"
+                             height="46"
+                             alt="Аватар пользователя Befevitle"
+                        />
+                        Befevitle                    </a>
+                </div>
+                            <div class="fl_l people_cell">
+                    <a href="http://jeka.by/users/profile/Weenievomeoxy" title="Weenievomeoxy">
+                        <img src="http://jeka.by/assets/images/site/avatars_default/ava_46.jpg"
+                             width="46"
+                             height="46"
+                             alt="Аватар пользователя Weenievomeoxy"
+                        />
+                        Weenievomeoxy                    </a>
+                </div>
+                            <div class="fl_l people_cell">
+                    <a href="http://jeka.by/users/profile/a2hcndws9" title="a2hcndws9">
+                        <img src="http://jeka.by/assets/images/site/avatars_default/ava_46.jpg"
+                             width="46"
+                             height="46"
+                             alt="Аватар пользователя a2hcndws9"
+                        />
+                        a2hcndws9                    </a>
+                </div>
+
+            </div>
+</div>
+<div class="block-menu">
+    <div class="right-block-caption">
+        ПОСЛЕДНИЕ КОММЕНТАРИИ
+    </div>
+    <div class="right-block" id="last_cmts_block">
+
+            <ul>
+                                    <li>
+                        <a href="http://jeka.by/post/1022#cmt163" title="zgolweb: Было лень читать, многабукф. Посмотрел видео : )">
+                            Было лень читать, многабукф. Посмотрел видео : )</a>
+                                            </li>
+                                    <li>
+                        <a href="http://jeka.by/post/1008#cmt162" title="root: Действительно, 2006 год, может работать с php4.. Да, тогда, пожалуй, соглашусь.">
+                            Действительно, 2006 год, может работать с php4..…</a>
+                                            </li>
+                                    <li>
+                        <a href="http://jeka.by/post/1008#cmt161" title="Sedoi: dklab.ru/lib/DbSimple/ - смотрим год обновления. 2006!!!! Это ж какая версия мускуля была? Либа ужасно старая и полюбому надо что-то будет допиливать.">
+                            dklab.ru/lib/DbSimple/ - смотрим год обновления.…</a>
+                                            </li>
+                                    <li>
+                        <a href="http://jeka.by/post/1008#cmt160" title="root: Насчёт DBSimple - что то я не замечал за ней косяков, чтобы надо было ходить и подпиливать. Методы выглядят красиво, мне нравится эта либа.">
+                            Насчёт DBSimple - что то я не замечал за ней кос…</a>
+                                            </li>
+                                    <li>
+                        <a href="http://jeka.by/post/1008#cmt159" title="Sedoi: "Единственный плюс тот, что обёртка самописная. " - я бы сказал, что это огромный минус.
+По поводу DBSimple - это как конструктор "сделай сам". Сама либа очень древняя и давно не обновлялась, так что, чтобы она хоро…">
+                            "Единственный плюс тот, что обёртка самописная.…</a>
+                                            </li>
+                                    <li>
+                        <a href="http://jeka.by/post/1008#cmt158" title="root: Sedoi, это ничем не лучше PDO. Это один из моих первых классов на php. Единственный плюс тот, что обёртка самописная.
+Безопасней и правильней будет использовать PDO или, например, DBSimple dklab.ru/lib/DbSimple/
+Я…">
+                            <b>Sedoi</b>, это ничем не лучше PDO. Это один и…</a>
+                                            </li>
+                                    <li>
+                        <a href="http://jeka.by/post/1008#cmt157" title="Sedoi: А чем ЭТО лучше чем стандартный PDO? Не вижу никакого смысла, пустой вброс для контента.">
+                            А чем ЭТО лучше чем стандартный PDO? Не вижу ник…</a>
+                                            </li>
+                                    <li>
+                        <a href="http://jeka.by/post/1016#cmt156" title="Sedoi: А почему не написано, каким образом запустить индекс и сам сфинкс? Сказал раз, говори два.">
+                            А почему не написано, каким образом запустить ин…</a>
+                                            </li>
+                            </ul>
+            </div>
+</div> </div>
+            <div class="clear"></div>
+
+    </div>
+
+    <div id="bottom">
+       <div id="footer">
+    <div class="menus">
+        <ul id="bottom-menu">
+                            <li>
+                    <a href="http://jeka.by/about">
+                        О проекте
+                    </a>
+                </li>
+                            <li>
+                    <a href="http://jeka.by/feedback">
+                        Обратная связь
+                    </a>
+                </li>
+                    </ul>
+
+        <ul id="languages">
+                            <li>
+                    <a href="http://jeka.by/users/changeLanguage/ru-ru" title="Русский"><b>Русский</b></a>                </li>
+                            <li>
+                    <a href="http://jeka.by/users/changeLanguage/en-us" title="English (US)">English</a>                </li>
+                    </ul>
+    </div>
+
+    <div class="counters">
+                    <div id="counter_akavita">
+<!--Akavita counter start-->
+    <script type="text/javascript">var AC_ID=56820;var AC_TR=false;
+    (function(){var l='http://adlik.akavita.com/acode.js'; var t='text/javascript';
+    try {var h=document.getElementsByTagName('head')[0];
+    var s=document.createElement('script'); s.src=l;s.type=t;h.appendChild(s);}catch(e){
+    document.write(unescape('%3Cscript src="'+l+'" type="'+t+'"%3E%3C/script%3E'));}})();
+    </script><span id="AC_Image"></span>
+    <noscript><a target='_blank' href='http://www.akavita.by/'>
+    <img src='http://adlik.akavita.com/bin/lik?id=56820&it=1'
+    border='0' height='1' width='1' alt='Akavita'/>
+    </a></noscript>
+<!--Akavita counter end-->
+</div>            </div>
+</div>
+    </div>
+
+
+            <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-38894584-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+    </body>
+</html>
