@@ -6,8 +6,6 @@ class Crawler_Sender extends Parser_AbstractHttp
     {
         try {
             $response = $this->getResponse($formDataToInsert);
-//            return $response;
-            var_dump($response->getBody());
         } catch (Exception $e) {
             // failed by curl exception
             $data['curlException'] = $e;
@@ -30,14 +28,13 @@ class Crawler_Sender extends Parser_AbstractHttp
             ->setMethod(strtoupper($formDataToInsert['method']))
             ->setUrl(new Http_Url($formDataToInsert['action']));
 
-        $names = '';
+		$fieldNames = array();
         foreach ($formDataToInsert['dataToInsert'] as $data) {
-            $request->setPostVar($data['key'], $data['value']);
-            $names .= $data['key'] . ', ';
+            $request->setPostVar($data['name'], $data['value']);
+			$fieldNames[] = $data['name'];
         }
-        $names = rtrim(trim($names), ',');
 
-        $this->getLog()->write("Try send form({$names}) to url={$formDataToInsert['action']}...");
+        $this->getLog()->write("Try send form(".implode(', ', $fieldNames).") to url={$formDataToInsert['action']}");
 
         try {
             $response = $this->getClient()->send($request);

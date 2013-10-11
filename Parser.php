@@ -68,14 +68,14 @@ class Crawler_Parser extends Parser_AbstractHttp
 
     private function filterForm(array $form) {
         if (strtolower($form['method']) !== 'post') {
-            $this->getLog()->write('Found form without post method with ' . count($form['fields']) . ' fields. Skip it.');
+            $this->getLog()->write('Found form without post method with ' . count($form['fields']) . ' fields. Skipping.');
             return false;
         }
         if (!$form['action']) {
             $form['action'] = $this->url;
         }
         if (!$form['fields']) {
-            $this->getLog()->write('Found form without fields. Skip it.');
+            $this->getLog()->write('Found form without fields. Skipping.');
             return false;
         }
 

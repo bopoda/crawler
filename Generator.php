@@ -4,51 +4,81 @@ class Crawler_Generator
 {
     public static function createFormData(array $formStructure)
     {
-        $postData = array();
-        foreach ($formStructure['fields'] as $field) {
-            if (!@$field['name']) {
-                continue;
-            }
-
-            if (@strtolower($field['type']) == 'text') {
-                $postData[] = array(
-                    'key' => $field['name'],
-                    'value' => 'anyText',
-                );
-            }
-        }
-
-        return array(
-            'action' => $formStructure['action'],
-            'method' => $formStructure['method'],
-            'dataToInsert' => self::generateDataToInsert($formStructure['fields']),
-        );
+		return array(
+			'action' => $formStructure['action'],
+			'method' => $formStructure['method'],
+			'dataToInsert' => self::generateDataToInsert($formStructure['fields']),
+		);
     }
 
     public static function generateDataToInsert($fields)
     {
         $dataToInsert = array();
         foreach ($fields as $field) {
-            $type = strtolower(@$field['type']);
-            if (!@$field['name'] || !$type) {
-                continue;
-            }
+			if (
+				!isset($field['name'])
+					|| !$field['name']
+					|| !isset($field['type'])
+					|| !$field['type']
+			) {
+				continue;
+			}
 
-            if (in_array($type, array('text', 'hidden'))) {
-                $dataToInsert[] = array(
-                    'key' => $field['name'],
-                    'value' => 'anyText',
-                );
-            }
-            elseif ($type == 'textarea') {
-                $dataToInsert[] = array(
-                    'key' => $field['name'],
-                    'value' => '<p><b>privet!</b>. chto za bred.</p>',
-                );
-            }
+			$type = $field['type'];
+			$name = $field['name'];
+			$value = @$field['value'];
+
+			switch ($type) {
+				case 'hidden':
+					$dataToInsert[] = array(
+						'type' => $type,
+						'name' => $name,
+						'value' => $value,
+					);
+					break;
+
+				case 'text':
+					$dataToInsert[] = array(
+						'type' => $type,
+						'name' => $name,
+						'value' => 'hehehe',
+					);
+					break;
+
+				case 'textarea':
+					$dataToInsert[] = array(
+						'type' => $type,
+						'name' => $name,
+						'value' => '<p>Очень позновательно.</p>',
+					);
+					break;
+				case 'checkbox':
+					$dataToInsert[] = array(
+						'type' => $type,
+						'name' => $name,
+						'value' => $value ? : 'on',	// TODO: check it (if value not declared - on ??)
+					);
+					break;
+				case 'submit':
+					$dataToInsert[] = array(
+						'type' => $type,
+						'name' => $name,
+						'value' => $value,
+					);
+					break;
+
+				default:
+					// do nothing
+					break;
+			}
         }
 
         return $dataToInsert;
     }
+
+	protected static function generateField()
+	{
+
+	}
 
 }
